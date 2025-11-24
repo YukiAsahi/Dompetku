@@ -1,0 +1,12 @@
+com\mycompany\dompetku\Model\Dompet.class
+com\mycompany\dompetku\Model\KartuLaporan.class
+com\mycompany\dompetku\Model\Pengguna.class
+com\mycompany\dompetku\Model\HubungkanOrtuAnak.class
+com\mycompany\dompetku\Dompetku.class
+com\mycompany\dompetku\Model\BatasUang.class
+com\mycompany\dompetku\Model\CatatanUang.class
+com\mycompany\dompetku\Model\DaftarAkunBaru.class
+com\mycompany\dompetku\Model\Kategori.class
+com\mycompany\dompetku\DAO\BaseDAO.class
+com\mycompany\dompetku\View\LoginController.class
+com\mycompany\dompetku\DAO\PenggunaDAO.class
