@@ -1,0 +1,14 @@
+Proyek\Model\HubungkanOrtuAnak.class
+Proyek\Model\DaftarAkunBaru.class
+Proyek\Model\CatatanUang.class
+Proyek\Model\Pengguna.class
+Proyek\Dompetku.class
+Proyek\DAO\BaseDAO.class
+Proyek\View\LoginController.class
+Proyek\Model\Dompet.class
+Proyek\Model\KartuLaporan.class
+Proyek\DAO\PenggunaDAO.class
+Proyek\Model\Kategori.class
+Proyek\DAO\DaftarAkunBaruDAO.class
+Proyek\Model\BatasUang.class
+Proyek\View\RegisterController.class
