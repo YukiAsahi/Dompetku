@@ -1,0 +1,366 @@
+
+.root {
+    -fx-font-family: "Lora";
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.hyperlink {
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-underline: false;
+}
+
+.hyperlink:visited {
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #23e879;
+}
+
+.hyperlink:focused {
+    -fx-border-color: transparent;
+}
+
+
+.logoAtasKiri {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+}
+
+.linkAtasKiri {
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-underline: false;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.linkAtasKiri:visited {
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+}
+
+.linkAtasKiri:hover {
+    -fx-text-fill: #23e879;
+}
+
+.linkAtasKiri:focused {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.navAktif {
+    -fx-font-weight: bold;
+    -fx-text-fill: #23e879;
+}
+
+.navAktif:visited {
+    -fx-text-fill: #23e879;
+}
+
+.navAktif:hover {
+    -fx-text-fill: #1abc6e;
+}
+
+
+.formLogin {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 25, 0, 0, 8);
+}
+
+.judulLogin {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a2e;
+    -fx-padding: 0 0 8 0;
+}
+
+
+.inputTeks {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 0 35 0 45;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.inputTeks:hover {
+    -fx-border-color: #bdbdbd;
+}
+
+.inputTeks:focused {
+    -fx-border-color: #23e879;
+    -fx-border-width: 2;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(35, 232, 121, 0.15), 8, 0, 0, 0);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.ikonInput {
+    -fx-text-fill: #666666;
+    -fx-padding: 0 0 0 12;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+
+.ingatSaya {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+    -fx-cursor: hand;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.ingatSaya:hover {
+    -fx-text-fill: #333333;
+}
+
+.ingatSaya .box {
+    -fx-border-color: #999999;
+    -fx-background-color: white;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.ingatSaya:selected .box {
+    -fx-background-color: #23e879;
+    -fx-border-color: #23e879;
+}
+
+.ingatSaya:selected .mark {
+    -fx-background-color: white;
+}
+
+.lupaKataSandi {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666666;
+    -fx-underline: false;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.lupaKataSandi:visited {
+    -fx-text-fill: #666666;
+}
+
+.lupaKataSandi:hover {
+    -fx-text-fill: #23e879;
+}
+
+.lupaKataSandi:focused {
+    -fx-border-color: transparent;
+}
+
+
+.tombolMasuk {
+    -fx-background-color: linear-gradient(to right, #1a1a2e, #16213e);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 3);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tombolMasuk:hover {
+    -fx-background-color: linear-gradient(to right, #23e879, #1abc6e);
+    -fx-effect: dropshadow(gaussian, rgba(35, 232, 121, 0.4), 12, 0, 0, 4);
+}
+
+.tombolMasuk:pressed {
+    -fx-background-color: #1abc6e;
+    -fx-effect: dropshadow(gaussian, rgba(35, 232, 121, 0.3), 6, 0, 0, 2);
+}
+
+.tombolMasuk:focused {
+    -fx-border-color: transparent;
+}
+
+
+.teksAtau {
+    -fx-text-fill: #888888;
+    -fx-font-size: 13px;
+}
+
+.linkDaftar {
+    -fx-text-fill: #23e879;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-underline: false;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.linkDaftar:visited {
+    -fx-text-fill: #23e879;
+}
+
+.linkDaftar:hover {
+    -fx-text-fill: #1abc6e;
+    -fx-underline: true;
+}
+
+.linkDaftar:focused {
+    -fx-border-color: transparent;
+}
+
+
+.tombolLihatSandi {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 20;
+    -fx-min-height: 20;
+    -fx-max-width: 20;
+    -fx-max-height: 20;
+    -fx-cursor: hand;
+    -fx-opacity: 0.6;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tombolLihatSandi:hover {
+    -fx-opacity: 1.0;
+}
+
+.tombolLihatSandi:hover,
+.tombolLihatSandi:armed,
+.tombolLihatSandi:pressed,
+.tombolLihatSandi:focused,
+.tombolLihatSandi:focused:hover {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+
+
+.text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.password-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.button {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button:focused {
+    -fx-border-color: transparent;
+}
+
+
+
+
+.my-alert {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", "Lora", sans-serif;
+}
+
+
+.dialog-pane {
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #2E7D32;     
+    -fx-border-width: 1px;
+}
+
+
+.dialog-pane > .header-panel {
+    -fx-background-color: #ffffff; 
+    -fx-padding: 15 20 5 20;
+}
+
+
+.dialog-pane > .header-panel > .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E7D32; 
+}
+
+
+.dialog-pane > .content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+.dialog-pane > .content > .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+
+.dialog-pane > .header-panel > .graphic-container {
+    -fx-background-color: transparent;
+}
+
+
+.dialog-pane .button-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+
+.dialog-pane .button {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #2E7D32; 
+}
+
+.dialog-pane .button:pressed {
+    -fx-background-color: #1abc6e;
+}
+
+
+.text-input-dialog .text-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+}
+
+.text-input-dialog .text-field:focused {
+    -fx-border-color: #2E7D32;
+    -fx-background-color: white;
+}

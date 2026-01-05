@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" 
+           stylesheets="@../css/pilihanak.css" 
+           xmlns="http://javafx.com/javafx/17" 
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="Proyek.Controller.PilihAnakController">
+
+    <!-- Background Image - will be bound to resize -->
+    <ImageView fx:id="bgImage" preserveRatio="false" StackPane.alignment="CENTER">
+        <image>
+            <Image url="@../image/background.jpg"/>
+        </image>
+    </ImageView>
+    
+    <!-- Overlay + Content -->
+    <AnchorPane styleClass="overlay">
+        <BorderPane AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            
+            <center>
+                <!-- Main Content Card - Centered -->
+                <VBox fx:id="mainCard" alignment="CENTER" spacing="18" maxWidth="480" 
+                      styleClass="main-card" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets top="35" right="40" bottom="35" left="40"/>
+                    </padding>
+                    
+                    <!-- Header -->
+                    <Label text="DOMPETKU" styleClass="app-title"/>
+                    <Label text="Parent Portal" styleClass="app-subtitle"/>
+                    
+                    <VBox styleClass="separator" prefHeight="1"/>
+                    
+                    <!-- Welcome Message -->
+                    <Label fx:id="lblWelcome" text="Selamat Datang!" styleClass="welcome-text"/>
+                    <Label text="Pilih anak yang ingin Anda pantau" styleClass="instruction-text"/>
+                    
+                    <!-- Children List -->
+                    <ScrollPane fx:id="childrenScrollPane" fitToWidth="true" styleClass="children-scroll" 
+                                maxHeight="180" VBox.vgrow="ALWAYS">
+                        <VBox fx:id="childrenList" spacing="10" styleClass="children-list">
+                            <padding>
+                                <Insets top="10" right="5" bottom="10" left="5"/>
+                            </padding>
+                        </VBox>
+                    </ScrollPane>
+                    
+                    <!-- No Children Message (shown when empty) -->
+                    <VBox fx:id="noChildrenBox" alignment="CENTER" spacing="10" visible="false" managed="false">
+                        <Label text="Belum ada anak yang terhubung" styleClass="no-children-text"/>
+                    </VBox>
+                    
+                    <VBox styleClass="separator" prefHeight="1"/>
+                    
+                    <!-- Add New Child Section -->
+                    <Label text="Hubungkan Anak Baru" styleClass="section-title"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <TextField fx:id="codeField" promptText="Masukkan kode anak" styleClass="code-field" prefWidth="200"/>
+                        <Button fx:id="btnConnect" text="Hubungkan" styleClass="connect-button"/>
+                    </HBox>
+                    <Label fx:id="statusLabel" text="" styleClass="status-label"/>
+                    
+                    <!-- Logout -->
+                    <Button fx:id="btnLogout" text="Logout" styleClass="logout-button"/>
+                </VBox>
+            </center>
+            
+        </BorderPane>
+    </AnchorPane>
+    
+</StackPane>

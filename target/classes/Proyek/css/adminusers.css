@@ -1,0 +1,204 @@
+.root {
+    -fx-font-family: "Lora", serif;
+    -fx-background-color: transparent;
+}
+
+
+.sidebar {
+    -fx-background-image: url("../image/money-bg.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 24;
+    -fx-spacing: 16;
+}
+
+.sidebarTitle {
+    -fx-background-color: #0b4b3b;
+    -fx-background-radius: 18;
+    -fx-padding: 14 26 14 26;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-wrap-text: false;
+}
+
+.sidebarSeparator {
+    -fx-background-color: #cccccc;
+}
+
+
+.menuItem {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 15;
+    -fx-cursor: hand;
+}
+
+.menuItem:hover {
+    -fx-background-color: rgba(35, 232, 121, 0.2);
+    -fx-text-fill: #23e879;
+}
+
+.menuItemActive {
+    -fx-background-color: rgba(35, 232, 121, 0.3);
+    -fx-text-fill: #23e879;
+    -fx-font-weight: bold;
+}
+
+
+.logoutButton {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.logoutButton:hover {
+    -fx-background-color: #dc2626;
+}
+
+
+
+.contentWrapper {
+    -fx-padding: 40 60 40 40;
+    -fx-background-color: rgba(0, 48, 38, 0.92);
+    -fx-background-radius: 12;
+}
+
+.sectionTitle {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 60 10 60;
+    -fx-background-radius: 8;
+}
+
+.contentScrollPane {
+    -fx-background-color: transparent;
+}
+
+.contentScrollPane .viewport {
+    -fx-background-color: transparent;
+}
+
+.emptyText {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+.searchField {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+    -fx-padding: 10 16;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 20;
+}
+
+
+
+.userCard {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 15 20 15 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0.0, 0, 2);
+}
+
+.userName {
+    -fx-text-fill: #2d3436;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.userEmail {
+    -fx-text-fill: #636e72;
+    -fx-font-size: 12px;
+}
+
+.statusLabelActive {
+    -fx-text-fill: #00b894;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.statusLabelInactive {
+    -fx-text-fill: #d63031;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+
+.actionButton {
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+    -fx-min-width: 100px;
+}
+
+.btnActivate {
+    -fx-background-color: #0984e3;
+}
+
+.btnActivate:hover {
+    -fx-background-color: #74b9ff;
+}
+
+.btnDeactivate {
+    -fx-background-color: #e17055;
+}
+
+.btnDeactivate:hover {
+    -fx-background-color: #fab1a0;
+}
+
+
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-background-radius: 10em;
+    -fx-border-radius: 10em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 10em;
+    -fx-background-insets: 2;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button,
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: " ";
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Proyek.Controller.TransactionMahasiswaController"
+            fx:id="rootPane"
+            prefWidth="1280.0" prefHeight="720.0"
+            stylesheets="@../css/transactionmahasiswa.css"
+            styleClass="rootPane">
+
+    <left>
+        <VBox fx:id="sidebar"
+              prefWidth="260.0"
+              spacing="16.0"
+              styleClass="sidebar">
+              
+            <HBox spacing="8.0" alignment="CENTER">
+                <Label text="Dompetku"
+                       style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            </HBox>
+
+            <VBox spacing="8.0" alignment="CENTER" styleClass="sidebar-profile">
+                <Circle fx:id="imgProfileCircle"
+                        radius="45.0"
+                        stroke="white" strokeWidth="3"
+                        styleClass="profile-circle"/>
+                <Label fx:id="lblUsername"
+                       text="Username"
+                       styleClass="profile-username"/>
+            </VBox>
+
+            <!-- Menu DompetKu (Dashboard) -->
+            <VBox spacing="4.0" style="-fx-padding: 8 0 0 0;">
+                <Button fx:id="btnDashboard"
+                        text="Dashboard"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnTransaction" text="Transaction"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnWallet"
+                        text="Wallet"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnPlanning"
+                        text="Planning"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnHistory"
+                        text="Category"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+            </VBox>
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <VBox spacing="4.0">
+                <Button fx:id="btnSettings"
+                        maxWidth="Infinity"
+                        styleClass="tombolSettings">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <Image url="@../image/setting.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="areaKonten">
+            <VBox spacing="20.0">
+                <padding>
+                    <Insets topRightBottomLeft="20.0"/>
+                </padding>
+                
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <Button fx:id="btnToggleSidebar"
+                            text="≡"
+                            styleClass="tombolToggleSidebar"/>
+                    <Label fx:id="lblPageTitle" text="INCOME" styleClass="judulHalaman"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblAddTransaction" 
+                           text="+ Add Transaction" 
+                           styleClass="labelTambahTransaksi"
+                           onMouseClicked="#handleShowAddDialog"/>
+                    <Button fx:id="btnNotification" styleClass="notifButton">
+                        <graphic>
+                            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                                <Image url="@../image/notification.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <VBox spacing="12.0" VBox.vgrow="ALWAYS" styleClass="kartuTabel">
+                    <padding>
+                        <Insets topRightBottomLeft="16.0"/>
+                    </padding>
+                    
+                    <HBox alignment="CENTER_LEFT" spacing="12.0">
+                        <Label text="Transaction History" styleClass="judulKartu"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="txtSearch" promptText="🔍 Search..." prefWidth="200.0" styleClass="inputCari"/>
+                    </HBox>
+                    
+                    <TableView fx:id="tblTransaksi" VBox.vgrow="ALWAYS" styleClass="tabelTransaksi">
+                        <columns>
+                            <TableColumn fx:id="colTanggal" text="Date" prefWidth="100"/>
+                            <TableColumn fx:id="colDompet" text="Wallet" prefWidth="120"/>
+                            <TableColumn fx:id="colKategori" text="Category" prefWidth="130"/>
+                            <TableColumn fx:id="colNominal" text="Amount" prefWidth="140"/>
+                            <TableColumn fx:id="colCatatan" text="Note" prefWidth="200"/>
+                            
+                            <TableColumn fx:id="colAksi" text="Action" prefWidth="120"/>
+                            
+                            <TableColumn fx:id="colSort" text="" prefWidth="150"/>
+                            
+                        </columns>
+                        <placeholder>
+                            <Label text="No transactions yet" styleClass="placeholderTabel"/>
+                        </placeholder>
+                    </TableView>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>
