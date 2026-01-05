@@ -11,14 +11,14 @@ import java.io.InputStream;
 public class Dompetku extends Application {
 
     private static Stage primaryStage;
-    private static boolean firstShow = true; // untuk ukuran awal saja
+    private static boolean firstShow = true; 
 
     @Override
     public void start(Stage stage) throws IOException {
         loadCustomFonts();
 
         primaryStage = stage;
-        showHomeScene(); // atau showLoginScene kalau mau
+        showHomeScene(); 
     }
     private void loadCustomFonts() {
         try {
@@ -139,7 +139,7 @@ public class Dompetku extends Application {
         primaryStage.show();
     }
     public static void showOrangTuaDashboardScene() throws IOException {
-        showPilihAnak(); // Redirect to child selection first
+        showPilihAnak(); 
     }
     public static void showTransactionMahasiswa() throws IOException {
         Parent root = FXMLLoader.load(Dompetku.class.getResource("/Proyek/View/TransactionMahasiswaView.fxml"));
@@ -214,4 +214,5 @@ public class Dompetku extends Application {
         launch();
     }
 }
+
 
