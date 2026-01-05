@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" stylesheets="@../css/about.css" 
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="Proyek.Controller.AboutController">
+
+    <ImageView fx:id="bgImage" fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="false">
+        <image>
+            <Image url="@../image/money-bg.png" />
+        </image>
+    </ImageView>
+
+    <AnchorPane styleClass="lapisanGelap">
+        <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" 
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                <top>
+                    <HBox alignment="CENTER_RIGHT" spacing="100" styleClass="navbar" BorderPane.alignment="CENTER">
+                        <children>
+                            <Label onMouseClicked="#handleHomeClick" styleClass="itemNav" text="Home" />
+                            <Label styleClass="itemNav, itemNavAktif" text="About us" />
+                            <Label onMouseClicked="#handleContactClick" styleClass="itemNav" text="Contact" />
+                        </children>
+                        <padding>
+                            <Insets bottom="0" left="80" right="80" top="45" />
+                        </padding>
+                    </HBox>
+                </top>
+
+                <center>
+                    <VBox alignment="CENTER" spacing="40.0">
+                        <padding>
+                            <Insets top="20.0" bottom="20.0"/>
+                        </padding>
+                        
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label styleClass="subjudul" text="MEET THE EXPERTS" />
+                            <Label styleClass="judulUtama" text="TIM KAMI" />
+                        </VBox>
+
+                        <HBox alignment="CENTER" spacing="25.0" styleClass="containerTim">
+                            
+                            <VBox styleClass="kartuMember" alignment="CENTER">
+                                <ImageView fitHeight="140.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="fotoMember">
+                                    <image><Image url="@../image/Naufal.jpg" /></image>
+                                </ImageView>
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Label styleClass="namaMember" text="Naufal" />
+                                <Label styleClass="roleMember" text="Project Manager" />
+                            </VBox>
+
+                            <VBox styleClass="kartuMember" alignment="CENTER">
+                                <ImageView fitHeight="140.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="fotoMember">
+                                    <image><Image url="@../image/Dayat.jpeg" /></image>
+                                </ImageView>
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Label styleClass="namaMember" text="Dayat" />
+                                <Label styleClass="roleMember" text="Lead Developer" />
+                            </VBox>
+
+                            <VBox styleClass="kartuMember" alignment="CENTER">
+                                <ImageView fitHeight="140.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="fotoMember">
+                                    <image><Image url="@../image/Melie.jpeg" /></image>
+                                </ImageView>
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Label styleClass="namaMember" text="Melinda" />
+                                <Label styleClass="roleMember" text="UI/UX Designer" />
+                            </VBox>
+
+                            <VBox styleClass="kartuMember" alignment="CENTER">
+                                <ImageView fitHeight="140.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="fotoMember">
+                                    <image><Image url="@../image/Togar.jpeg" /></image>
+                                </ImageView>
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Label styleClass="namaMember" text="Togar" />
+                                <Label styleClass="roleMember" text="Database Engineer" />
+                            </VBox>
+
+                            <VBox styleClass="kartuMember" alignment="CENTER">
+                                <ImageView fitHeight="140.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" styleClass="fotoMember">
+                                    <image><Image url="@../image/Tyas.jpeg" /></image>
+                                </ImageView>
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Label styleClass="namaMember" text="Tyas" />
+                                <Label styleClass="roleMember" text="Quality Assurance" />
+                            </VBox>
+
+                        </HBox>
+                        
+                        <Label text="&quot;Bersama Mewujudkan Keuangan yang Lebih Baik&quot;" styleClass="quotesBawah"/>
+                    </VBox>
+                </center>
+                
+                <bottom>
+                     <HBox alignment="CENTER" style="-fx-padding: 0 0 30 0;">
+                        <Label styleClass="versiApp" text="DompetKu v1.0 • 2025" />
+                     </HBox>
+                </bottom>
+
+            </BorderPane>
+        </children>
+    </AnchorPane>
+</StackPane>

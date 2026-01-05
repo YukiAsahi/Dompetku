@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Proyek.Controller.HistoryMahasiswaController"
+            fx:id="rootPane"
+            prefWidth="1280.0" prefHeight="720.0"
+            stylesheets="@../css/kategorimahasiswa.css"
+            styleClass="rootPane">
+
+    <left>
+        <VBox fx:id="sidebar"
+              prefWidth="260.0"
+              spacing="16.0"
+              styleClass="sidebar">
+              
+            <HBox spacing="8.0" alignment="CENTER">
+                <Label text="Dompetku"
+                       style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            </HBox>
+
+            <VBox spacing="8.0" alignment="CENTER" styleClass="sidebar-profile">
+                <Circle fx:id="imgProfileCircle"
+                        radius="45.0"
+                        stroke="white" strokeWidth="3"
+                        styleClass="profile-circle"/>
+                <Label fx:id="lblUsername"
+                       text="Username"
+                       styleClass="profile-username"/>
+            </VBox>
+
+            <!-- Menu -->
+            <VBox spacing="4.0" style="-fx-padding: 8 0 0 0;">
+                <Button fx:id="btnDashboard"
+                        text="Dashboard"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnTransaction" text="Transaction"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnWallet"
+                        text="Wallet"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnPlanning"
+                        text="Planning"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnHistory"
+                        text="Category"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+            </VBox>
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <VBox spacing="4.0">
+                <Button fx:id="btnSettings"
+                        maxWidth="Infinity"
+                        styleClass="tombolSettings">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <Image url="@../image/setting.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="areaKonten">
+            <VBox spacing="20.0">
+                <padding>
+                    <Insets topRightBottomLeft="20.0"/>
+                </padding>
+                
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <Button fx:id="btnToggleSidebar"
+                            text="≡"
+                            styleClass="tombolToggleSidebar"/>
+                    <Label fx:id="lblPageTitle" text="KATEGORI" styleClass="judulHalaman"/>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblAddKategori" text="+ Tambah Kategori" styleClass="labelTambahKategori"/>
+                    <Button fx:id="btnNotification" styleClass="notifButton">
+                        <graphic>
+                            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                                <Image url="@../image/notification.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <!-- Area konten kategori -->
+                <VBox fx:id="kategoriContainer" spacing="20.0" VBox.vgrow="ALWAYS" styleClass="kartuKategori">
+                    <padding>
+                        <Insets topRightBottomLeft="24.0"/>
+                    </padding>
+                    
+                    <!-- Empty state -->
+                    <VBox fx:id="emptyState" alignment="CENTER" spacing="16.0" VBox.vgrow="ALWAYS">
+                        <Label text="📁" style="-fx-font-size: 64px;"/>
+                        <Label text="Belum ada kategori" styleClass="emptyStateTitle"/>
+                        <Label text="Klik tombol di atas untuk menambahkan kategori pertama Anda" styleClass="emptyStateSubtitle"/>
+                    </VBox>
+                    
+                    <!-- Grid kategori sebagai VBox dengan scroll (hidden saat kosong) -->
+                    <ScrollPane fx:id="kategoriScrollPane" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" 
+                                style="-fx-background: transparent; -fx-background-color: transparent;" 
+                                visible="false" managed="false" VBox.vgrow="ALWAYS">
+                        <VBox fx:id="kategoriGrid" spacing="12.0">
+                            <!-- Category cards akan ditambahkan secara dinamis -->
+                        </VBox>
+                    </ScrollPane>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

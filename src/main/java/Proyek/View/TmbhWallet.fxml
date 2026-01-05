@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox prefWidth="420.0" spacing="18.0" styleClass="popupKartu" 
+      stylesheets="@../css/TmbhTransaksi.css"
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
+    </padding>
+    
+    <VBox alignment="CENTER_LEFT" spacing="6.0">
+        <Label fx:id="lblDialogTitle" styleClass="popupKartuTitle" text="💳 Tambah Wallet Baru" />
+        <Label text="Isi detail wallet di bawah ini" styleClass="popupKartuSubtitle"/>
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Nama Wallet" styleClass="labelInputKartu" />
+        <TextField fx:id="txtNamaWallet" promptText="contoh: Dompet Utama" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox spacing="8.0" alignment="CENTER">
+        <Label text="Icon Wallet (klik untuk upload gambar)" styleClass="labelInputKartu" />
+        <StackPane fx:id="iconPickerContainer" styleClass="iconPickerContainer">
+            <Circle fx:id="circleIconPreview" radius="40.0" styleClass="iconPreviewCircle"/>
+            <Label fx:id="lblIconPlaceholder" text="+" styleClass="iconPlaceholderLabel"/>
+        </StackPane>
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Saldo Awal (Opsional)" styleClass="labelInputKartu" />
+        <TextField fx:id="txtSaldoAwal" promptText="contoh: 500000" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox fx:id="vboxDefaultInfo" spacing="4.0" visible="true">
+        <HBox spacing="8.0" alignment="CENTER_LEFT">
+            <Label text="ℹ️" style="-fx-font-size: 14px;"/>
+            <Label fx:id="lblDefaultInfo" text="Wallet ini akan menjadi wallet default Anda" styleClass="infoText"/>
+        </HBox>
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="12.0">
+        <padding>
+            <Insets top="8.0" />
+        </padding>
+        <Button fx:id="btnCancel" text="✕ Batal" styleClass="tombolBatalKartu" />
+        <Button fx:id="btnSave" text="✓ Simpan" styleClass="tombolSimpanKartu" />
+    </HBox>
+</VBox>

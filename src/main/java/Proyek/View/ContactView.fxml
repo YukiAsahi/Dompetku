@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" stylesheets="@../css/contact.css" 
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="Proyek.Controller.ContactController">
+
+    <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="false">
+        <image>
+            <Image url="@../image/money-bg.png" />
+        </image>
+    </ImageView>
+    
+    <AnchorPane styleClass="lapisanGelap">
+        <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" 
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                <top>
+                    <HBox alignment="CENTER_RIGHT" spacing="100" styleClass="navbar" BorderPane.alignment="CENTER">
+                        <children>
+                            <Label onMouseClicked="#handleHomeClick" styleClass="itemNav" text="Home" />
+                            <Label onMouseClicked="#handleAboutClick" styleClass="itemNav" text="About us" />
+                            <Label styleClass="itemNav, itemNavAktif" text="Contact" />
+                        </children>
+                        <padding>
+                            <Insets bottom="0" left="80" right="80" top="45" />
+                        </padding>
+                    </HBox>
+                </top>
+
+                <center>
+                    <HBox alignment="CENTER" spacing="80.0">
+                        <padding>
+                            <Insets top="40" bottom="40" left="40" right="40"/>
+                        </padding>
+
+                        <VBox spacing="30.0" maxWidth="450.0">
+                            <VBox spacing="5">
+                                <Label styleClass="subjudul" text="HUBUNGI KAMI" />
+                                <Label styleClass="judulUtama" text="We're Here to Help" wrapText="true"/>
+                            </VBox>
+                            
+                            <Label styleClass="teksDeskripsi" 
+                                   text="Jika Anda memiliki kendala teknis atau pertanyaan seputar aplikasi, jangan ragu untuk menghubungi kontak resmi kami di bawah ini." 
+                                   wrapText="true" />
+                            
+                            <VBox spacing="20.0" styleClass="boxInfo">
+                                <VBox>
+                                    <Label styleClass="labelInfo" text="Email Support" />
+                                    <Label styleClass="isiInfo" text="dompet.ku.promlan@gmail.com" />
+                                </VBox>
+                                <VBox>
+                                    <Label styleClass="labelInfo" text="Kantor Pusat" />
+                                    <Label styleClass="isiInfo" text="Jl. Veteran No.8, Nagri Kaler, Kec. Purwakarta, Kabupaten Purwakarta, Jawa Barat 41115" wrapText="true"/>
+                                </VBox>
+                            </VBox>
+                        </VBox>
+
+                        <VBox styleClass="cpContainer" spacing="20.0" maxWidth="450.0" HBox.hgrow="ALWAYS" maxHeight="485.0">
+                            <Label styleClass="judulCP" text="Contact Person Tim" />
+                            
+                            <ScrollPane fitToWidth="true" styleClass="scroll-pane-cp" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" prefHeight="400">
+                                <content>
+                                    <VBox spacing="15.0">
+                                        <HBox styleClass="cardCP" alignment="CENTER_LEFT" spacing="15">
+                                            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                                                <image><Image url="@../image/profile_placeholder.png" /></image>
+                                            </ImageView>
+                                            <VBox>
+                                                <Label styleClass="namaCP" text="Naufal" />
+                                                <Label styleClass="detailCP" text="Project Manager • 0812-xxxx-xxxx" />
+                                            </VBox>
+                                        </HBox>
+
+                                        <HBox styleClass="cardCP" alignment="CENTER_LEFT" spacing="15">
+                                            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                                                <image><Image url="@../image/profile_placeholder.png" /></image>
+                                            </ImageView>
+                                            <VBox>
+                                                <Label styleClass="namaCP" text="Dayat" />
+                                                <Label styleClass="detailCP" text="Lead Dev • 0813-xxxx-xxxx" />
+                                            </VBox>
+                                        </HBox>
+
+                                        <HBox styleClass="cardCP" alignment="CENTER_LEFT" spacing="15">
+                                            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                                                <image><Image url="@../image/profile_placeholder.png" /></image>
+                                            </ImageView>
+                                            <VBox>
+                                                <Label styleClass="namaCP" text="Melinda" />
+                                                <Label styleClass="detailCP" text="UI/UX • 0821-xxxx-xxxx" />
+                                            </VBox>
+                                        </HBox>
+                                        
+                                        <HBox styleClass="cardCP" alignment="CENTER_LEFT" spacing="15">
+                                            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                                                <image><Image url="@../image/profile_placeholder.png" /></image>
+                                            </ImageView>
+                                            <VBox>
+                                                <Label styleClass="namaCP" text="Togar" />
+                                                <Label styleClass="detailCP" text="Database • 0811-xxxx-xxxx" />
+                                            </VBox>
+                                        </HBox>
+
+                                        <HBox styleClass="cardCP" alignment="CENTER_LEFT" spacing="15">
+                                            <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                                                <image><Image url="@../image/profile_placeholder.png" /></image>
+                                            </ImageView>
+                                            <VBox>
+                                                <Label styleClass="namaCP" text="Tyas" />
+                                                <Label styleClass="detailCP" text="QA • 0857-xxxx-xxxx" />
+                                            </VBox>
+                                        </HBox>
+
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </VBox>
+
+                    </HBox>
+                </center>
+
+            </BorderPane>
+        </children>
+    </AnchorPane>
+</StackPane>

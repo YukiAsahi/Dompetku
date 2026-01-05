@@ -1,0 +1,345 @@
+
+.root {
+    -fx-font-family: "Lora";
+}
+
+.popupKartu {
+    -fx-background-color: linear-gradient(to bottom, #002b23, #004d40);
+    -fx-background-radius: 24;
+}
+
+.popupKartuTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.popupKartuSubtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #a5f3fc;
+}
+
+.labelInputKartu {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a5f3fc;
+    -fx-font-weight: bold;
+}
+
+.inputFormKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+}
+
+.inputFormKartu:focused {
+    -fx-border-color: #14b8a6;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.4), 10, 0.3, 0, 0);
+}
+
+.toggleTipeKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 12;
+    -fx-padding: 12 20 12 20;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+}
+
+.toggleTipeKartu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggleTipeKartu:selected {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+    -fx-border-color: #14b8a6;
+}
+
+.tombolSimpanKartu {
+    -fx-background-color: linear-gradient(to right, #14b8a6, #0d9488);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 14 32 14 32;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.5), 12, 0.3, 0, 4);
+}
+
+.tombolSimpanKartu:hover {
+    -fx-background-color: linear-gradient(to right, #0d9488, #0f766e);
+}
+
+.tombolBatalKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 12;
+    -fx-padding: 14 28 14 28;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+}
+
+.tombolBatalKartu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+.inputFormKartu.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+.inputFormKartu.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.inputFormKartu.combo-box .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #004d40;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 4);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-padding: 10 14 10 14;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #14b8a6;
+}
+
+.inputFormKartu.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.inputFormKartu.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.inputFormKartu.date-picker .text-field {
+    -fx-text-fill: #1e293b;
+}
+
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #f1f5f9;
+}
+
+.date-picker-popup .spinner-label {
+    -fx-text-fill: #1e293b;
+}
+
+.date-picker-popup .day-cell {
+    -fx-text-fill: #1e293b;
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: rgba(20, 184, 166, 0.2);
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #64748b;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #94a3b8;
+}
+
+.inputFormKartu.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.inputFormKartu.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.inputFormKartu.text-area .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+
+.toggleIconKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-background-radius: 12;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+    -fx-min-width: 50;
+    -fx-min-height: 50;
+}
+
+.toggleIconKartu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggleIconKartu:selected {
+    -fx-background-color: #14b8a6;
+    -fx-border-color: #14b8a6;
+}
+
+.infoText {
+    -fx-text-fill: #a5f3fc;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+
+.iconPickerContainer {
+    -fx-cursor: hand;
+    -fx-pref-width: 90;
+    -fx-pref-height: 90;
+}
+
+.iconPreviewCircle {
+    -fx-fill: rgba(255, 255, 255, 0.1);
+    -fx-stroke: rgba(255, 255, 255, 0.3);
+    -fx-stroke-width: 2;
+    -fx-stroke-dash-array: 8 4;
+}
+
+.iconPreviewCircle:hover {
+    -fx-stroke: #14b8a6;
+}
+
+.iconPlaceholderLabel {
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.my-alert {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", "Lora", sans-serif;
+}
+
+.dialog-pane {
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #2E7D32;    
+    -fx-border-width: 1px;
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15 20 5 20;
+}
+
+.dialog-pane > .header-panel > .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E7D32;
+}
+
+.dialog-pane > .content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+.dialog-pane > .content > .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+.dialog-pane > .header-panel > .graphic-container {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #2E7D32;
+}
+
+.dialog-pane .button:pressed {
+    -fx-background-color: #1abc6e;
+}
+
+
+.text-input-dialog .text-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+}
+
+.text-input-dialog .text-field:focused {
+    -fx-border-color: #2E7D32;
+    -fx-background-color: white;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-background-radius: 10em;
+    -fx-border-radius: 10em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 10em;
+    -fx-background-insets: 2;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button,
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: " ";
+}

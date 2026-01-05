@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root"
+           xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="Proyek.Controller.AdminDashboardController"
+           stylesheets="@../css/admindashboard.css">
+
+    <children>
+        <ImageView fx:id="bgImage"
+                   preserveRatio="false"
+                   StackPane.alignment="CENTER">
+            <image>
+                <Image url="@../image/background.jpg" />
+            </image>
+        </ImageView>
+
+        <BorderPane>
+            <left>
+                <VBox styleClass="sidebar"
+                      prefWidth="280.0"
+                      spacing="30.0"
+                      BorderPane.alignment="CENTER_LEFT">
+
+                    <Label text="ADMIN DASHBOARD"
+                           maxWidth="Infinity"
+                           styleClass="sidebarTitle" />
+
+                    <Separator styleClass="sidebarSeparator" />
+
+                    <VBox spacing="12.0">
+                        <children>
+                            <Button text="Applicant"
+                                    onAction="#handleApplicantNav"
+                                    styleClass="menuItem"/>
+                            <Button text="Users"
+                                    onAction="#handleUsersNav"
+                                    styleClass="menuItem"/>
+                            <Button text="Traffic Application"
+                                    onAction="#handleTrafficNav"
+                                    styleClass="menuItem"/>
+                            <Button text="History"
+                                    onAction="#handleHistoryNav"
+                                    styleClass="menuItem"/>
+                        </children>
+                    </VBox>
+
+                    <Region VBox.vgrow="ALWAYS" />
+
+                    <Button text="Logout"
+                            onAction="#handleLogout"
+                            maxWidth="Infinity"
+                            styleClass="logoutButton" />
+
+                    <padding>
+                        <Insets top="40.0" right="30.0" bottom="40.0" left="30.0" />
+                    </padding>
+                </VBox>
+            </left>
+
+            <center>
+                <StackPane BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox styleClass="contentWrapper"
+                              alignment="TOP_CENTER"
+                              spacing="25.0">
+
+                            <Label text="New Applicants"
+                                   styleClass="sectionTitle" />
+
+                            <ScrollPane fitToWidth="true"
+                                        hbarPolicy="NEVER"
+                                        vbarPolicy="AS_NEEDED"
+                                        styleClass="contentScrollPane">
+                                <content>
+                                    <VBox fx:id="applicantListContainer"
+                                          spacing="16.0" />
+                                </content>
+                            </ScrollPane>
+                        </VBox>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</StackPane>

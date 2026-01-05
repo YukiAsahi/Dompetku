@@ -1,0 +1,359 @@
+
+.root {
+    -fx-font-family: "Lora";
+}
+
+
+.rootPane {
+    -fx-background-color: #002b23;
+    -fx-padding: 0;
+}
+
+
+.sidebar {
+    -fx-background-image: url("../image/money-bg.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 24;
+    -fx-spacing: 16;
+}
+
+
+.judulAplikasi {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+
+.profile-circle {
+    -fx-fill: #004d40;
+    -fx-stroke: white;
+    -fx-stroke-width: 3;
+}
+
+.profile-username {
+    -fx-text-fill: #a5f3fc;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+
+.tombolSidebar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.tombolSidebar:hover {
+    -fx-background-color: rgba(35, 232, 121, 0.2);
+    -fx-text-fill: #23e879;
+}
+
+.tombolSidebar:pressed {
+    -fx-background-color: rgba(35, 232, 121, 0.3);
+}
+
+.tombolSidebarAktif {
+    -fx-background-color: rgba(35, 232, 121, 0.3);
+    -fx-text-fill: #23e879;
+    -fx-font-weight: bold;
+}
+
+
+.tombolKeluar {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 16px;
+}
+
+.tombolKeluar:hover {
+    -fx-background-color: #dc2626;
+}
+
+.tombolSettings {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-background-radius: 6;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+}
+
+.tombolSettings:hover {
+    -fx-background-color: rgba(35, 232, 121, 0.2);
+    -fx-text-fill: #23e879;
+}
+
+
+.areaKonten {
+    -fx-background-image: url("../image/background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 16;
+}
+
+
+.judulDashboard {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+
+.tombolToggleSidebar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 18px;
+    -fx-background-radius: 999;
+    -fx-padding: 4 10 4 10;
+}
+
+.tombolToggleSidebar:hover {
+    -fx-background-color: #0f766e;
+    -fx-text-fill: white;
+}
+
+
+.kartu {
+    -fx-background-color: #f9fafb;
+    -fx-background-radius: 12;
+    -fx-padding: 12;
+}
+
+.judulKartu {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+
+.progress-bar>.track {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 999;
+}
+
+.progress-bar>.bar {
+    -fx-background-radius: 999;
+}
+
+
+.chart-pie {
+    -fx-pie-label-visible: false;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+
+.notifButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+}
+
+.notifButton:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.chart-series-line {
+    -fx-stroke: #22c55e;
+    -fx-stroke-width: 3px;
+}
+
+.chart-line-symbol {
+    -fx-background-color: #22c55e, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+
+.chart-bar {
+    -fx-bar-fill: #06b6d4;
+    -fx-background-color: linear-gradient(to top, #0891b2, #06b6d4);
+    -fx-background-radius: 4 4 0 0;
+}
+
+.chart-bar:hover {
+    -fx-background-color: linear-gradient(to top, #06b6d4, #22d3ee);
+}
+
+
+.axis-label {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+}
+
+.axis-tick-mark,
+.axis-minor-tick-mark {
+    -fx-stroke: rgba(255, 255, 255, 0.5);
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(255, 255, 255, 0.2);
+    -fx-stroke-dash-array: 4 4;
+}
+
+.chart-vertical-zero-line,
+.chart-horizontal-zero-line {
+    -fx-stroke: rgba(255, 255, 255, 0.4);
+}
+
+
+.chart-pie {
+    -fx-pie-label-visible: false;
+    -fx-start-angle: 90;
+}
+
+.default-color0.chart-pie {
+    -fx-pie-color: #14b8a6;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #0ea5e9;
+}
+
+.default-color2.chart-pie {
+    -fx-pie-color: #f59e0b;
+}
+
+.default-color3.chart-pie {
+    -fx-pie-color: #8b5cf6;
+}
+
+.default-color4.chart-pie {
+    -fx-pie-color: #ef4444;
+}
+
+.default-color5.chart-pie {
+    -fx-pie-color: #22c55e;
+}
+
+.default-color6.chart-pie {
+    -fx-pie-color: #ec4899;
+}
+
+.default-color7.chart-pie {
+    -fx-pie-color: #64748b;
+}
+
+
+.chart-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item-text {
+    -fx-text-fill: white;
+}
+
+
+.budgetLabel {
+    -fx-text-fill: #374151;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.budgetValue {
+    -fx-text-fill: #14b8a6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+
+.summary-row {
+    -fx-padding: 0 0 10 0;
+}
+
+.summaryCard {
+    -fx-background-color: rgba(30, 41, 59, 0.85);
+    -fx-background-radius: 12;
+    -fx-padding: 15 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 0, 2);
+}
+
+.summaryTitle {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-font-size: 12px;
+}
+
+.summaryValue {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.summaryValueExpense {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.summaryValueIncome {
+    -fx-text-fill: #22c55e;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+.recentTransactionsCard {
+    -fx-background-color: rgba(30, 41, 59, 0.85);
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+}
+
+.recentTransactionsTitle {
+    -fx-text-fill: #23e879;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.transactionRow {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 8;
+    -fx-padding: 10 15;
+}
+
+.transactionRow:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.transactionDate {
+    -fx-text-fill: rgba(255, 255, 255, 0.6);
+    -fx-font-size: 11px;
+}
+
+.transactionCategory {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.transactionAmountExpense {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.transactionAmountIncome {
+    -fx-text-fill: #22c55e;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}

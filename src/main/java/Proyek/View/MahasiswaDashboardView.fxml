@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Proyek.Controller.MahasiswaDashboardController"
+            fx:id="rootPane"
+            prefWidth="1280.0" prefHeight="720.0"
+            stylesheets="@../css/mahasiswadashboard.css"
+            styleClass="rootPane">
+
+    <!-- ========== SIDEBAR KIRI ========== -->
+    <left>
+        <VBox fx:id="sidebar"
+              prefWidth="260.0"
+              spacing="16.0"
+              styleClass="sidebar">
+              
+            <!-- Judul Aplikasi -->
+            <HBox spacing="8.0" alignment="CENTER">
+                <Label text="Dompetku"
+                       style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            </HBox>
+
+
+            <!-- Profil / User -->
+            <VBox spacing="8.0" alignment="CENTER" styleClass="sidebar-profile">
+
+                <!-- Foto profil dalam bentuk lingkaran -->
+                <Circle fx:id="imgProfileCircle"
+                        radius="45.0"
+                        stroke="white" strokeWidth="3"
+                        styleClass="profile-circle"/>
+
+                <!-- Username -->
+                <Label fx:id="lblUsername"
+                       text="Username"
+                       styleClass="profile-username"/>
+            </VBox>
+
+            <!-- Menu DompetKu (Dashboard) -->
+            <VBox spacing="4.0" style="-fx-padding: 8 0 0 0;">
+                <Button fx:id="btnDashboard"
+                        text="Dashboard"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnTransaction" text="Transaction"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnWallet"
+                        text="Wallet"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnPlanning"
+                        text="Planning"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnHistory"
+                        text="Category"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+            </VBox>
+
+            <!-- Spacer -->
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <!-- Settings menu -->
+            <VBox spacing="4.0">
+                <Button fx:id="btnSettings"
+                        maxWidth="Infinity"
+                        styleClass="tombolSettings">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <Image url="@../image/setting.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <!-- ========== AREA TENGAH (DINAMIS) ========== -->
+    <center>
+        <StackPane fx:id="contentArea"
+                   styleClass="areaKonten">
+            <!-- View default: Dashboard -->
+            <AnchorPane fx:id="dashboardView">
+                <VBox spacing="16.0"
+                      AnchorPane.topAnchor="0.0"
+                      AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0">
+
+                    <!-- Header + Toggle Sidebar -->
+                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                        <!-- Tombol toggle sidebar -->
+                        <Button fx:id="btnToggleSidebar"
+                                text="≡"
+                                styleClass="tombolToggleSidebar"/>
+
+                        <Label text="DASHBOARD"
+                               styleClass="judulDashboard"/>
+                        
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        
+                        <!-- Notification Button -->
+                        <Button fx:id="btnNotification" styleClass="notifButton">
+                            <graphic>
+                                <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                                    <Image url="@../image/notification.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </HBox>
+                    
+                    <!-- SUMMARY CARDS ROW -->
+                    <HBox spacing="16.0" styleClass="summary-row">
+                        <!-- Total Saldo -->
+                        <VBox styleClass="summaryCard" HBox.hgrow="ALWAYS" alignment="CENTER">
+                            <Label text="Total Saldo" styleClass="summaryTitle"/>
+                            <Label fx:id="lblTotalSaldo" text="Rp 0" styleClass="summaryValue"/>
+                        </VBox>
+                        <!-- Pengeluaran Bulan Ini -->
+                        <VBox styleClass="summaryCard" HBox.hgrow="ALWAYS" alignment="CENTER">
+                            <Label text="Pengeluaran Bulan Ini" styleClass="summaryTitle"/>
+                            <Label fx:id="lblPengeluaranBulan" text="Rp 0" styleClass="summaryValueExpense"/>
+                        </VBox>
+                        <!-- Pemasukan Bulan Ini -->
+                        <VBox styleClass="summaryCard" HBox.hgrow="ALWAYS" alignment="CENTER">
+                            <Label text="Pemasukan Bulan Ini" styleClass="summaryTitle"/>
+                            <Label fx:id="lblPemasukanBulan" text="Rp 0" styleClass="summaryValueIncome"/>
+                        </VBox>
+                        <!-- Jumlah Transaksi -->
+                        <VBox styleClass="summaryCard" HBox.hgrow="ALWAYS" alignment="CENTER">
+                            <Label text="Jumlah Transaksi" styleClass="summaryTitle"/>
+                            <Label fx:id="lblJumlahTransaksi" text="0" styleClass="summaryValue"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- ROW 1 -->
+                    <HBox spacing="16.0" VBox.vgrow="ALWAYS">
+                        <!-- Arus Kas Bulanan -->
+                        <AnchorPane HBox.hgrow="ALWAYS"
+                                    styleClass="kartu">
+                            <VBox spacing="8.0"
+                                  AnchorPane.topAnchor="12.0"
+                                  AnchorPane.bottomAnchor="12.0"
+                                  AnchorPane.leftAnchor="12.0"
+                                  AnchorPane.rightAnchor="12.0">
+                                <Label text="Pengeluaran Bulanan"
+                                       styleClass="judulKartu"/>
+                                <LineChart fx:id="lineCashFlowChart"
+                                           legendVisible="false"
+                                           animated="false"
+                                           VBox.vgrow="ALWAYS">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT"/>
+                                    </yAxis>
+                                </LineChart>
+                            </VBox>
+                        </AnchorPane>
+
+                        <!-- Kolom kanan kecil -->
+                        <VBox spacing="16.0" prefWidth="320.0">
+
+                            <!-- Pengeluaran per Kategori -->
+                            <AnchorPane styleClass="kartu">
+                                <VBox spacing="8.0"
+                                      AnchorPane.topAnchor="12.0"
+                                      AnchorPane.bottomAnchor="12.0"
+                                      AnchorPane.leftAnchor="12.0"
+                                      AnchorPane.rightAnchor="12.0">
+                                    <Label text="Pengeluaran per Kategori"
+                                           styleClass="judulKartu"/>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblCatA" text="-" prefWidth="100.0"/>
+                                        <ProgressBar fx:id="pbRegionA" prefWidth="120.0" progress="0"/>
+                                        <Label fx:id="lblRegionAPercent" text="0%"/>
+                                    </HBox>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblCatB" text="-" prefWidth="100.0"/>
+                                        <ProgressBar fx:id="pbRegionB" prefWidth="120.0" progress="0"/>
+                                        <Label fx:id="lblRegionBPercent" text="0%"/>
+                                    </HBox>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblCatC" text="-" prefWidth="100.0"/>
+                                        <ProgressBar fx:id="pbRegionC" prefWidth="120.0" progress="0"/>
+                                        <Label fx:id="lblRegionCPercent" text="0%"/>
+                                    </HBox>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblCatD" text="-" prefWidth="100.0"/>
+                                        <ProgressBar fx:id="pbRegionD" prefWidth="120.0" progress="0"/>
+                                        <Label fx:id="lblRegionDPercent" text="0%"/>
+                                    </HBox>
+                                </VBox>
+                            </AnchorPane>
+
+                            <!-- Progress Goals -->
+                            <AnchorPane styleClass="kartu">
+                                <VBox spacing="8.0"
+                                      AnchorPane.topAnchor="12.0"
+                                      AnchorPane.bottomAnchor="12.0"
+                                      AnchorPane.leftAnchor="12.0"
+                                      AnchorPane.rightAnchor="12.0">
+                                    <Label text="Progress Goals"
+                                           styleClass="judulKartu"/>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblGoalA" text="-" prefWidth="60.0"/>
+                                        <ProgressBar fx:id="pbSavingNew" prefWidth="140.0" progress="0"/>
+                                        <Label fx:id="lblSavingNew" text="0%"/>
+                                    </HBox>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblGoalB" text="-" prefWidth="60.0"/>
+                                        <ProgressBar fx:id="pbSavingRepeat" prefWidth="140.0" progress="0"/>
+                                        <Label fx:id="lblSavingRepeat" text="0%"/>
+                                    </HBox>
+
+                                    <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                        <Label fx:id="lblGoalC" text="-" prefWidth="60.0"/>
+                                        <ProgressBar fx:id="pbSavingVip" prefWidth="140.0" progress="0"/>
+                                        <Label fx:id="lblSavingVip" text="0%"/>
+                                    </HBox>
+                                </VBox>
+                            </AnchorPane>
+                        </VBox>
+                    </HBox>
+
+                    <!-- ROW 2 -->
+                    <HBox spacing="16.0" VBox.vgrow="ALWAYS">
+                        <!-- Monthly Sales Revenue -->
+                        <AnchorPane HBox.hgrow="ALWAYS"
+                                    styleClass="kartu">
+                            <VBox spacing="8.0"
+                                  AnchorPane.topAnchor="12.0"
+                                  AnchorPane.bottomAnchor="12.0"
+                                  AnchorPane.leftAnchor="12.0"
+                                  AnchorPane.rightAnchor="12.0">
+                                <Label text="Pemasukan Bulanan"
+                                       styleClass="judulKartu"/>
+
+                                <BarChart fx:id="barMonthlySalesChart"
+                                          categoryGap="15.0"
+                                          legendVisible="false"
+                                          animated="false"
+                                          VBox.vgrow="ALWAYS">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT"/>
+                                    </yAxis>
+                                </BarChart>
+                            </VBox>
+                        </AnchorPane>
+
+                        <!-- Budget Usage -->
+                        <AnchorPane prefWidth="420.0"
+                                    styleClass="kartu">
+                            <VBox spacing="8.0"
+                                  AnchorPane.topAnchor="12.0"
+                                  AnchorPane.bottomAnchor="12.0"
+                                  AnchorPane.leftAnchor="12.0"
+                                  AnchorPane.rightAnchor="12.0">
+
+                                <Label text="Pengeluaran Terkini"
+                                       styleClass="judulKartu"/>
+
+                                <HBox spacing="16.0" VBox.vgrow="ALWAYS">
+                                    <!-- Left side: Category spending list -->
+                                    <VBox spacing="6.0" prefWidth="200.0">
+                                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                            <Label fx:id="lblBudgetA" text="-" prefWidth="100.0" styleClass="budgetLabel"/>
+                                            <Label text="Rp" styleClass="budgetValue"/>
+                                            <Label fx:id="lblProductARemain" text="0" prefWidth="80.0" styleClass="budgetValue"/>
+                                        </HBox>
+                                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                            <Label fx:id="lblBudgetB" text="-" prefWidth="100.0" styleClass="budgetLabel"/>
+                                            <Label text="Rp" styleClass="budgetValue"/>
+                                            <Label fx:id="lblProductBRemain" text="0" prefWidth="80.0" styleClass="budgetValue"/>
+                                        </HBox>
+                                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                            <Label fx:id="lblBudgetC" text="-" prefWidth="100.0" styleClass="budgetLabel"/>
+                                            <Label text="Rp" styleClass="budgetValue"/>
+                                            <Label fx:id="lblProductCRemain" text="0" prefWidth="80.0" styleClass="budgetValue"/>
+                                        </HBox>
+                                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                            <Label fx:id="lblBudgetD" text="-" prefWidth="100.0" styleClass="budgetLabel"/>
+                                            <Label text="Rp" styleClass="budgetValue"/>
+                                            <Label fx:id="lblProductDRemain" text="0" prefWidth="80.0" styleClass="budgetValue"/>
+                                        </HBox>
+                                        <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                            <Label fx:id="lblBudgetE" text="-" prefWidth="100.0" styleClass="budgetLabel"/>
+                                            <Label text="Rp" styleClass="budgetValue"/>
+                                            <Label fx:id="lblProductERemain" text="0" prefWidth="80.0" styleClass="budgetValue"/>
+                                        </HBox>
+                                    </VBox>
+
+                                    <!-- Right side: Pie Chart -->
+                                    <PieChart fx:id="pieRemainingBudget"
+                                              title="Distribusi Anggaran"
+                                              legendVisible="false"
+                                              labelsVisible="false"
+                                              prefWidth="180.0"
+                                              prefHeight="180.0"/>
+                                </HBox>
+                            </VBox>
+                        </AnchorPane>
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

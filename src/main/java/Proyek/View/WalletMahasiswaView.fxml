@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="Proyek.Controller.WalletMahasiswaController"
+            fx:id="rootPane"
+            prefWidth="1280.0" prefHeight="720.0"
+            stylesheets="@../css/walletmahasiswa.css"
+            styleClass="rootPane">
+
+    <left>
+        <VBox fx:id="sidebar"
+              prefWidth="260.0"
+              spacing="16.0"
+              styleClass="sidebar">
+              
+            <HBox spacing="8.0" alignment="CENTER">
+                <Label text="Dompetku"
+                       style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            </HBox>
+
+            <VBox spacing="8.0" alignment="CENTER" styleClass="sidebar-profile">
+                <Circle fx:id="imgProfileCircle"
+                        radius="45.0"
+                        stroke="white" strokeWidth="3"
+                        styleClass="profile-circle"/>
+                <Label fx:id="lblUsername"
+                       text="Username"
+                       styleClass="profile-username"/>
+            </VBox>
+
+            <!-- Menu -->
+            <VBox spacing="4.0" style="-fx-padding: 8 0 0 0;">
+                <Button fx:id="btnDashboard"
+                        text="Dashboard"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnTransaction" text="Transaction"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnWallet"
+                        text="Wallet"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnPlanning"
+                        text="Planning"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+                <Button fx:id="btnHistory"
+                        text="Category"
+                        maxWidth="Infinity"
+                        styleClass="tombolSidebar"/>
+            </VBox>
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <VBox spacing="4.0">
+                <Button fx:id="btnSettings"
+                        maxWidth="Infinity"
+                        styleClass="tombolSettings">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <Image url="@../image/setting.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="areaKonten">
+            <VBox spacing="20.0">
+                <padding>
+                    <Insets topRightBottomLeft="20.0"/>
+                </padding>
+                
+                <HBox alignment="CENTER_LEFT" spacing="16.0">
+                    <Button fx:id="btnToggleSidebar"
+                            text="≡"
+                            styleClass="tombolToggleSidebar"/>
+                    <Label fx:id="lblPageTitle" text="MY WALLET" styleClass="judulHalaman"/>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="btnNotification" styleClass="notifButton">
+                        <graphic>
+                            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                                <Image url="@../image/notification.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <!-- Area konten wallet -->
+                <VBox fx:id="walletContainer" spacing="20.0" VBox.vgrow="ALWAYS" styleClass="kartuWallet">
+                    <padding>
+                        <Insets topRightBottomLeft="24.0"/>
+                    </padding>
+                    
+                    <!-- Empty state dengan ikon + -->
+                    <VBox fx:id="emptyState" alignment="CENTER" spacing="16.0" VBox.vgrow="ALWAYS">
+                        <Label text="📁" style="-fx-font-size: 64px;"/>
+                        <Label text="Belum ada wallet" styleClass="emptyStateTitle"/>
+                        <Label text="Klik tombol di bawah untuk menambahkan wallet pertama Anda" styleClass="emptyStateSubtitle"/>
+                        <Button fx:id="btnAddFirstWallet" text="Tambah Wallet" styleClass="tombolTambahWallet" onAction="#handleShowAddWalletDialog"/>
+                    </VBox>
+                    
+                    <!-- Grid wallet (hidden saat kosong) -->
+                    <FlowPane fx:id="walletGrid" hgap="20.0" vgap="20.0" alignment="CENTER" visible="false" managed="false">
+                        <!-- Wallet cards akan ditambahkan secara dinamis -->
+                    </FlowPane>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

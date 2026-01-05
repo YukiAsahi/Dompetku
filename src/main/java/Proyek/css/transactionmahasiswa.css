@@ -1,0 +1,629 @@
+
+.root {
+    -fx-font-family: "Lora";
+}
+
+.rootPane {
+    -fx-background-color: #002b23;
+    -fx-padding: 0;
+}
+
+.sidebar {
+    -fx-background-image: url("../image/money-bg.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 24;
+    -fx-spacing: 16;
+}
+
+.judulBagian {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.profile-circle {
+    -fx-fill: #004d40;
+    -fx-stroke: white;
+    -fx-stroke-width: 3;
+}
+
+.profile-username {
+    -fx-text-fill: #a5f3fc;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.tombolSidebar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.tombolSidebar:hover {
+    -fx-background-color: rgba(35, 232, 121, 0.2);
+    -fx-text-fill: #23e879;
+}
+
+.tombolSidebarAktif {
+    -fx-background-color: rgba(35, 232, 121, 0.3);
+    -fx-text-fill: #23e879;
+    -fx-font-weight: bold;
+}
+
+.tombolKeluar {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+}
+
+.tombolKeluar:hover {
+    -fx-background-color: #dc2626;
+}
+
+.tombolSettings {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-background-radius: 6;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+}
+
+.tombolSettings:hover {
+    -fx-background-color: rgba(35, 232, 121, 0.2);
+    -fx-text-fill: #23e879;
+}
+
+.areaKonten {
+    -fx-background-image: url("../image/background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 16;
+}
+
+.judulHalaman {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.tombolToggleSidebar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 18px;
+    -fx-background-radius: 999;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.tombolToggleSidebar:hover {
+    -fx-background-color: #0f766e;
+    -fx-text-fill: white;
+}
+
+.labelTambahTransaksi {
+    -fx-text-fill: #14b8a6;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+    -fx-background-color: rgba(20, 184, 166, 0.15);
+    -fx-background-radius: 20;
+}
+
+.labelTambahTransaksi:hover {
+    -fx-background-color: rgba(20, 184, 166, 0.3);
+}
+
+.kartuTabel {
+    -fx-background-color: rgba(30, 41, 59, 0.85);
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.2, 0, 4);
+}
+
+.judulKartu {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.inputCari {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 20;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 13px;
+}
+
+.labelSort {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+}
+
+.inputSort {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+    -fx-padding: 6 12 6 12;
+    -fx-font-size: 12px;
+}
+
+.inputSort .list-cell {
+    -fx-text-fill: #334155;
+}
+
+.tombolSortOrder {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12 6 12;
+    -fx-cursor: hand;
+}
+
+.tombolSortOrder:hover {
+    -fx-background-color: #0f766e;
+}
+
+.tabelTransaksi {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.tabelTransaksi .column-header-background {
+    -fx-background-color: white;
+}
+
+
+.tabelTransaksi .column-header-background .filler {
+    -fx-background-color: white;
+}
+
+.tabelTransaksi .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 12 8 12 8;
+}
+
+.tabelTransaksi .column-header .label {
+    -fx-text-fill: #64748b;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+
+.inputSortHeader {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 4;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 4;
+    -fx-padding: 2 6 2 6;
+    -fx-font-size: 11px;
+}
+
+.inputSortHeader .list-cell {
+    -fx-text-fill: #334155;
+}
+
+.tombolSortHeader {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 4 8 4 8;
+    -fx-cursor: hand;
+}
+
+.tombolSortHeader:hover {
+    -fx-background-color: #0f766e;
+}
+
+.labelEditHeader {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.labelEditHeader:hover {
+    -fx-background-color: #0f766e;
+}
+
+.labelDeleteHeader {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.labelDeleteHeader:hover {
+    -fx-background-color: #dc2626;
+}
+
+.tabelTransaksi .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f1f5f9 transparent;
+}
+
+.tabelTransaksi .table-row-cell:odd {
+    -fx-background-color: #f8fafc;
+}
+
+.tabelTransaksi .table-row-cell:selected {
+    -fx-background-color: rgba(20, 184, 166, 0.15);
+}
+
+.tabelTransaksi .table-row-cell:hover {
+    -fx-background-color: rgba(20, 184, 166, 0.08);
+}
+
+.tabelTransaksi .table-cell {
+    -fx-padding: 12 8 12 8;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+}
+
+.placeholderTabel {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 14px;
+}
+
+.tombolEdit {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.tombolEdit:hover {
+    -fx-background-color: #2563eb;
+}
+
+.tombolHapus {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.tombolHapus:hover {
+    -fx-background-color: #dc2626;
+}
+
+
+.popupKartu {
+    -fx-background-color: linear-gradient(to bottom, #002b23, #004d40);
+    -fx-background-radius: 24;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 40, 0.4, 0, 12);
+}
+
+.popupKartuTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.popupKartuSubtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #a5f3fc;
+}
+
+.labelInputKartu {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a5f3fc;
+    -fx-font-weight: bold;
+}
+
+.inputFormKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+}
+
+.inputFormKartu:focused {
+    -fx-border-color: #14b8a6;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.4), 10, 0.3, 0, 0);
+}
+
+.toggleTipeKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 12;
+    -fx-padding: 12 20 12 20;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+}
+
+.toggleTipeKartu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggleTipeKartu:selected {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+    -fx-border-color: #14b8a6;
+}
+
+.tombolSimpanKartu {
+    -fx-background-color: linear-gradient(to right, #14b8a6, #0d9488);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 14 32 14 32;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.5), 12, 0.3, 0, 4);
+}
+
+.tombolSimpanKartu:hover {
+    -fx-background-color: linear-gradient(to right, #0d9488, #0f766e);
+}
+
+.tombolBatalKartu {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 12;
+    -fx-padding: 14 28 14 28;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 12;
+}
+
+.tombolBatalKartu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.popupContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 30, 0.3, 0, 10);
+}
+
+.popupHeader {
+    -fx-background-color: linear-gradient(to right, #002b23, #004d40);
+    -fx-background-radius: 16 16 0 0;
+}
+
+.popupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.popupSubtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #a5f3fc;
+}
+
+.popupBody {
+    -fx-background-color: white;
+    -fx-background-radius: 0 0 16 16;
+}
+
+.dialogContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 20, 0.3, 0, 8);
+}
+
+.dialogTitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.labelInput {
+    -fx-font-size: 12px;
+    -fx-text-fill: #64748b;
+    -fx-font-weight: bold;
+}
+
+.inputForm {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+    -fx-padding: 10 14 10 14;
+    -fx-font-size: 14px;
+}
+
+.inputForm:focused {
+    -fx-border-color: #14b8a6;
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.3), 8, 0.3, 0, 0);
+}
+
+.toggleTipe {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #64748b;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20 10 20;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.toggleTipe:hover {
+    -fx-background-color: #e2e8f0;
+}
+
+.toggleTipe:selected {
+    -fx-background-color: #14b8a6;
+    -fx-text-fill: white;
+}
+
+.tombolSimpan {
+    -fx-background-color: linear-gradient(to right, #14b8a6, #0d9488);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 12 28 12 28;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(20, 184, 166, 0.4), 8, 0.3, 0, 2);
+}
+
+.tombolSimpan:hover {
+    -fx-background-color: linear-gradient(to right, #0d9488, #0f766e);
+}
+
+.tombolBatal {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #64748b;
+    -fx-background-radius: 8;
+    -fx-padding: 12 24 12 24;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.tombolBatal:hover {
+    -fx-background-color: #e2e8f0;
+}
+
+
+.notifButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+}
+
+.notifButton:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.my-alert {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", "Lora", sans-serif;
+}
+
+.dialog-pane {
+    -fx-background-color: #ffffff; 
+    -fx-border-color: #2E7D32;    
+    -fx-border-width: 1px;
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15 20 5 20;
+}
+
+.dialog-pane > .header-panel > .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E7D32;
+}
+
+.dialog-pane > .content {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+.dialog-pane > .content > .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+.dialog-pane > .header-panel > .graphic-container {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10 20 20 20;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #2E7D32;
+}
+
+.dialog-pane .button:pressed {
+    -fx-background-color: #1abc6e;
+}
+
+
+.text-input-dialog .text-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+}
+
+.text-input-dialog .text-field:focused {
+    -fx-border-color: #2E7D32;
+    -fx-background-color: white;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-background-radius: 10em;
+    -fx-border-radius: 10em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 10em;
+    -fx-background-insets: 2;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button,
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: " ";
+}

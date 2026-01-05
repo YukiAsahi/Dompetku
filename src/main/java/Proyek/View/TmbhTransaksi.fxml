@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="520.0" spacing="18.0" styleClass="popupKartu" 
+      stylesheets="@../css/TmbhTransaksi.css"
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
+    </padding>
+    
+    <VBox alignment="CENTER_LEFT" spacing="6.0">
+        <Label fx:id="lblDialogTitle" styleClass="popupKartuTitle" text="➕ Tambah Transaksi Baru" />
+        <Label text="Isi detail transaksi di bawah ini" styleClass="popupKartuSubtitle"/>
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Jenis Transaksi" styleClass="labelInputKartu" />
+        <HBox spacing="10.0">
+            <ToggleButton fx:id="rbIncome" text="💰 Pemasukan" styleClass="toggleTipeKartu" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <ToggleButton fx:id="rbExpense" text="💸 Pengeluaran" styleClass="toggleTipeKartu" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <ToggleButton fx:id="rbTransfer" text="🔄 Transfer" styleClass="toggleTipeKartu" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        </HBox>
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Dompet Sumber" styleClass="labelInputKartu" />
+        <ComboBox fx:id="cmbDompetSumber" promptText="Pilih Dompet" prefWidth="Infinity" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox fx:id="vboxDompetTujuan" spacing="8.0" managed="false" visible="false">
+        <Label text="Dompet Tujuan" styleClass="labelInputKartu" />
+        <ComboBox fx:id="cmbDompetTujuan" promptText="Pilih Dompet Tujuan" prefWidth="Infinity" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox fx:id="vboxBiayaAdmin" spacing="8.0" managed="false" visible="false">
+        <Label text="Biaya Admin (Rp)" styleClass="labelInputKartu" />
+        <TextField fx:id="txtBiayaAdmin" promptText="contoh: 2500 (opsional, default 0)" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Nominal (Rp)" styleClass="labelInputKartu" />
+        <TextField fx:id="txtNominal" promptText="contoh: 500000" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox fx:id="vboxKategori" spacing="8.0">
+        <Label text="Kategori" styleClass="labelInputKartu" />
+        <ComboBox fx:id="cmbKategori" promptText="Pilih Kategori" prefWidth="Infinity" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Tanggal" styleClass="labelInputKartu" />
+        <DatePicker fx:id="dpTanggal" prefWidth="Infinity" styleClass="inputFormKartu" />
+    </VBox>
+
+    <VBox spacing="8.0">
+        <Label text="Catatan (Opsional)" styleClass="labelInputKartu" />
+        <TextArea fx:id="txtCatatan" promptText="Catatan tambahan..." prefRowCount="2" styleClass="inputFormKartu" />
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="12.0">
+        <padding>
+            <Insets top="8.0" />
+        </padding>
+        <Button fx:id="btnCancel" text="✕ Batal" styleClass="tombolBatalKartu" />
+        <Button fx:id="btnSave" text="✓ Simpan" styleClass="tombolSimpanKartu" />
+    </HBox>
+</VBox>
