@@ -9,13 +9,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Sesuaikan dengan JDK yang dipakai -->
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-
         <exec.mainClass>Proyek.Dompetku</exec.mainClass>
-
-        <!-- JavaFX versi yang kompatibel dengan JDK 21 -->
         <javafx.version>21.0.5</javafx.version>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
     </properties>
@@ -40,7 +36,6 @@
             <version>9.5.0</version>
         </dependency>
         
-        <!-- JavaMail for sending emails -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
@@ -50,7 +45,6 @@
 
     <build>
     <resources>
-        <!-- Copy resources from src/main/resources (fonts, etc) -->
         <resource>
             <directory>src/main/resources</directory>
             <includes>
@@ -59,7 +53,6 @@
                 <include>**/*.txt</include>
             </includes>
         </resource>
-        <!-- Copy semua FXML, CSS, dan gambar dari src/main/java ke classpath -->
         <resource>
             <directory>src/main/java</directory>
             <includes>
@@ -72,8 +65,7 @@
         </resource>
     </resources>
 
-    <plugins>
-        <!-- Compiler -->
+    <plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -83,8 +75,6 @@
                 <target>${maven.compiler.target}</target>
             </configuration>
         </plugin>
-
-        <!-- JavaFX plugin -->
         <plugin>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-maven-plugin</artifactId>
